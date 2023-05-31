@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args){
 
-inputSum();
-
+        inputSum();
+        System.out.println("hello");
 
     }
     public static void inputSum(){
