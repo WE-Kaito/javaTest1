@@ -2,12 +2,11 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args){
-
-        inputSum();
-        System.out.println("hello");
-
+    alarm(alertLevel(22));
+    alarm("blue");
     }
-    public static void inputSum(){
+
+   /* public static void inputSum(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Geben Sie einen Text ein und drücken Sie ENTER:");
         int input1 = scanner.nextInt();
@@ -41,5 +40,34 @@ public class Test {
         }
         return result;
     }
+    */
+
+    public static String alertLevel(int people){
+        if (people > 30){
+           return "green";
+        } else if (people < 30) {
+            return "red";
+        }
+        else{
+            return "yellow";
+        }
+    }
+
+    public static void alarm(String alertLevel){
+        switch (alertLevel){
+            case "green":
+                System.out.println("Max 60 people allowed");
+                break;
+            case "yellow":
+                System.out.println("30 people allowed");
+                break;
+            case "red":
+                System.out.println("no people allowed");
+                break;
+            default:
+                System.out.println("alarm is broken");
+        }
+    }
+
 
 }
